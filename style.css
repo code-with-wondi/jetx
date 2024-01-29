@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px){
+    .place-bet-div{
+        flex-direction: column;
+    }
+    
+    #main{
+        width: 600px;
+    }
+}
