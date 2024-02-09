@@ -1,0 +1,1010 @@
+<html dir="ltr" lang="en" style="--main-color: #c22b3c; --tab-color: #c22b3c; --user-color: #c22b3c; --logo: url(../Images/Skins/BestbetJetX/Mobile/logo.png); --help2: url(../Images/Skins/BestbetJetX/help2.png); --help-down: url(../Images/Skins/BestbetJetX/help-down.png); --help-up: url(../Images/Skins/BestbetJetX/help-up.png);"><head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#ffcc00"><meta name="theme-color" content="#1c1c1c"><title>
+	JetX
+</title>
+
+    <link rel="stylesheet" type="text/css" href="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Styles/fonts.css">
+    <link rel="stylesheet" type="text/css" href="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Styles/mobile.style.css">
+
+    <link href="https://eu-static.ssgcontent.com/cache/b5/Themes/Default/JetX/Styles/fonts.css" rel="stylesheet" type="text/css">
+    <link href="https://eu-static.ssgcontent.com/cache/b5/Themes/Default/JetX/Styles/mobile.style.css" rel="stylesheet" type="text/css">
+    
+<script>"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var App = /*#__PURE__*/function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  var _super = _createSuper(App);
+
+  function App() {
+    var _this;
+
+    _classCallCheck(this, App);
+
+    _this = _super.call(this);
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      current: [],
+      active: [],
+      cashOut: [],
+      activeHeight: 0,
+      activePaddingTop: 0,
+      cashOutHeight: 0,
+      cashOutPaddingTop: 0
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "setCurrent", function (list) {
+      _this.setState(function (state) {
+        var current = list;
+        return {
+          current: current
+        };
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "setActive", function (list, height, paddingTop) {
+      _this.setState(function (state) {
+        var active = list;
+        var activeHeight = height;
+        var activePaddingTop = paddingTop;
+        return {
+          active: active,
+          activeHeight: activeHeight,
+          activePaddingTop: activePaddingTop
+        };
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "setCashOut", function (list, height, paddingTop) {
+      _this.setState(function (state) {
+        var cashOut = list;
+        var cashOutHeight = height;
+        var cashOutPaddingTop = paddingTop;
+        return {
+          cashOut: cashOut,
+          cashOutHeight: cashOutHeight,
+          cashOutPaddingTop: cashOutPaddingTop
+        };
+      });
+    });
+
+    window.jetXReact = _assertThisInitialized(_this);
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: "formatAmount",
+    value: function formatAmount(amount, currency) {
+      amount = parseFloat(amount);
+
+      if (amount === 0) {
+        return /*#__PURE__*/React.createElement(React.Fragment, null, "--");
+      }
+
+      return /*#__PURE__*/React.createElement(React.Fragment, null, amount.toFixed(currency.fractionDigit), " ", /*#__PURE__*/React.createElement("span", {
+        className: "currency"
+      }, currency.currencyCode));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var current = this.state.current;
+      var playersCurrent = current.map(function (item) {
+        var playerId = item.playerId,
+            status = item.status,
+            displayName = item.displayName,
+            betAmount = item.betAmount,
+            cashoutFormated = item.cashoutFormated,
+            winAmount = item.winAmount,
+            currency = item.currency;
+        return /*#__PURE__*/React.createElement("div", {
+          className: 'row' + status,
+          key: playerId
+        }, /*#__PURE__*/React.createElement("div", {
+          className: "col1"
+        }, /*#__PURE__*/React.createElement("div", null, displayName)), /*#__PURE__*/React.createElement("div", {
+          className: "col2"
+        }, _this2.formatAmount(betAmount, currency)), /*#__PURE__*/React.createElement("div", {
+          className: "col3"
+        }, cashoutFormated), /*#__PURE__*/React.createElement("div", {
+          className: "col4"
+        }, _this2.formatAmount(winAmount, currency)));
+      });
+      var active = this.state.active;
+      var activeHeight = this.state.activeHeight;
+      var activePaddingTop = this.state.activePaddingTop;
+      var playersActive = active.map(function (item) {
+        var playerId = item.playerId,
+            status = item.status,
+            displayName = item.displayName,
+            betAmount = item.betAmount,
+            cashoutFormated = item.cashoutFormated,
+            winAmount = item.winAmount,
+            currency = item.currency;
+        return /*#__PURE__*/React.createElement("div", {
+          className: 'row' + status,
+          key: playerId
+        }, /*#__PURE__*/React.createElement("div", {
+          className: "col1"
+        }, /*#__PURE__*/React.createElement("div", null, displayName)), /*#__PURE__*/React.createElement("div", {
+          className: "col2"
+        }, _this2.formatAmount(betAmount, currency)), /*#__PURE__*/React.createElement("div", {
+          className: "col3"
+        }, cashoutFormated), /*#__PURE__*/React.createElement("div", {
+          className: "col4"
+        }, _this2.formatAmount(winAmount, currency)));
+      });
+      var cashOut = this.state.cashOut;
+      var cashOutHeight = this.state.cashOutHeight;
+      var cashOutPaddingTop = this.state.cashOutPaddingTop;
+      var playersCashOut = cashOut.map(function (item) {
+        var playerId = item.playerId,
+            status = item.status,
+            displayName = item.displayName,
+            betAmount = item.betAmount,
+            cashoutFormated = item.cashoutFormated,
+            winAmount = item.winAmount,
+            currency = item.currency;
+        return /*#__PURE__*/React.createElement("div", {
+          className: 'row' + status,
+          key: playerId
+        }, /*#__PURE__*/React.createElement("div", {
+          className: "col1"
+        }, /*#__PURE__*/React.createElement("div", null, displayName)), /*#__PURE__*/React.createElement("div", {
+          className: "col2"
+        }, _this2.formatAmount(betAmount, currency)), /*#__PURE__*/React.createElement("div", {
+          className: "col3"
+        }, cashoutFormated), /*#__PURE__*/React.createElement("div", {
+          className: "col4"
+        }, _this2.formatAmount(winAmount, currency)));
+      });
+      return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+        id: "playersCurrent"
+      }, playersCurrent), /*#__PURE__*/React.createElement("div", {
+        id: "playersActive",
+        style: {
+          height: activeHeight,
+          paddingTop: activePaddingTop
+        }
+      }, playersActive), /*#__PURE__*/React.createElement("div", {
+        id: "playersCashOut",
+        style: {
+          height: cashOutHeight,
+          paddingTop: cashOutPaddingTop
+        }
+      }, playersCashOut));
+    }
+  }]);
+
+  return App;
+}(React.Component);
+
+ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('players'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImh0dHBzOi8vZXUtc3RhdGljLnNzZ2NvbnRlbnQuY29tL2NhY2hlL2I1L0pldFhTdGczL0NvbnRlbnQvU2NyaXB0cy9yZWFjdC9yZWFjdC5qcyJdLCJuYW1lcyI6WyJBcHAiLCJjdXJyZW50IiwiYWN0aXZlIiwiY2FzaE91dCIsImFjdGl2ZUhlaWdodCIsImFjdGl2ZVBhZGRpbmdUb3AiLCJjYXNoT3V0SGVpZ2h0IiwiY2FzaE91dFBhZGRpbmdUb3AiLCJsaXN0Iiwic2V0U3RhdGUiLCJzdGF0ZSIsImhlaWdodCIsInBhZGRpbmdUb3AiLCJ3aW5kb3ciLCJqZXRYUmVhY3QiLCJhbW91bnQiLCJjdXJyZW5jeSIsInBhcnNlRmxvYXQiLCJ0b0ZpeGVkIiwiZnJhY3Rpb25EaWdpdCIsImN1cnJlbmN5Q29kZSIsInBsYXllcnNDdXJyZW50IiwibWFwIiwiaXRlbSIsInBsYXllcklkIiwic3RhdHVzIiwiZGlzcGxheU5hbWUiLCJiZXRBbW91bnQiLCJjYXNob3V0Rm9ybWF0ZWQiLCJ3aW5BbW91bnQiLCJmb3JtYXRBbW91bnQiLCJwbGF5ZXJzQWN0aXZlIiwicGxheWVyc0Nhc2hPdXQiLCJSZWFjdCIsIkNvbXBvbmVudCIsIlJlYWN0RE9NIiwicmVuZGVyIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFBTUEsRzs7Ozs7QUFXRixpQkFBYztBQUFBOztBQUFBOztBQUNWOztBQURVLDREQVZOO0FBQ0pDLE1BQUFBLE9BQU8sRUFBRSxFQURMO0FBRUpDLE1BQUFBLE1BQU0sRUFBRSxFQUZKO0FBR0pDLE1BQUFBLE9BQU8sRUFBRSxFQUhMO0FBSUpDLE1BQUFBLFlBQVksRUFBRSxDQUpWO0FBS0pDLE1BQUFBLGdCQUFnQixFQUFFLENBTGQ7QUFNSkMsTUFBQUEsYUFBYSxFQUFFLENBTlg7QUFPSkMsTUFBQUEsaUJBQWlCLEVBQUU7QUFQZixLQVVNOztBQUFBLGlFQU1ELFVBQUNDLElBQUQs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Q0FESjtBQVVILE9BWnNCLENBQXZCO0FBY0EsMEJBQ0ksOENBQ0k7QUFBSyxRQUFBLEVBQUUsRUFBQztBQUFSLFNBQTBCSyxjQUExQixDQURKLGVBRUk7QUFBSyxRQUFBLEVBQUUsRUFBQyxlQUFSO0FBQXdCLFFBQUEsS0FBSyxFQUFFO0FBQUNWLFVBQUFBLE1BQU0sRUFBRVAsWUFBVDtBQUF1QlEsVUFBQUEsVUFBVSxFQUFFUDtBQUFuQztBQUEvQixTQUFzRjBCLGFBQXRGLENBRkosZUFHSTtBQUFLLFFBQUEsRUFBRSxFQUFDLGdCQUFSO0FBQXlCLFFBQUEsS0FBSyxFQUFFO0FBQUNwQixVQUFBQSxNQUFNLEVBQUVMLGFBQVQ7QUFBd0JNLFVBQUFBLFVBQVUsRUFBRUw7QUFBcEM7QUFBaEMsU0FBeUZ5QixjQUF6RixDQUhKLENBREo7QUFPSDs7OztFQWpIYUMsS0FBSyxDQUFDQyxTOztBQW9IeEJDLFFBQVEsQ0FBQ0MsTUFBVCxlQUFnQixvQkFBQyxHQUFELE9BQWhCLEVBQXdCQyxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsU0FBeEIsQ0FBeEIiLCJzb3VyY2VzQ29udGVudCI6WyJjbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgc3RhdGUgPSB7XHJcbiAgICAgICAgY3VycmVudDogW10sXHJcbiAgICAgICAgYWN0aXZlOiBbXSxcclxuICAgICAgICBjYXNoT3V0OiBbXSxcclxuICAgICAgICBhY3RpdmVIZWlnaHQ6IDAsXHJcbiAgICAgICAgYWN0aXZlUGFkZGluZ1RvcDogMCxcclxuICAgICAgICBjYXNoT3V0SGVpZ2h0OiAwLFxyXG4gICAgICAgIGNhc2hPdXRQYWRkaW5nVG9wOiAwLFxyXG4gICAgfTtcclxuXHJcbiAgICBjb25zdHJ1Y3RvcigpIHtcclxuICAgICAgICBzdXBlcigpO1xyXG5cclxuICAgICAgICB3aW5kb3cuamV0WFJlYWN0ID0gdGhpcztcclxuICAgIH1cclxuXHJcbiAgICBzZXRDdXJyZW50ID0gKGxpc3QpID0+IHtcclxuICAgICAgICB0aGlzLnNldFN0YXRlKChzdGF0ZSkgPT4ge1xyXG4gICAgICAgICAgICBjb25zdCBjdXJyZW50ID0gbGlzdDtcclxuICAgICAgICAgICAgcmV0dXJuIHtjdXJyZW50fTtcclxuICAgICAgICB9KTtcclxuICAgIH07XHJcblxyXG4gICAgc2V0QWN0aXZlID0gKGxpc3QsIGhlaWdodCwgcGFkZGluZ1RvcCkgPT4ge1xyXG4gICAgICAgIHRoaXMuc2V0U3RhdGUoKHN0YXRlKSA9PiB7XHJcbiAgICAgICAgICAgIGNvbnN0IGFjdGl2ZSA9IGxpc3Q7XHJcbiAgICAgICAgICAgIGNvbnN0IGFjdGl2ZUhlaWdodCA9IGhlaWdodDtcclxuICAgICAgICAgICAgY29uc3QgYWN0aXZlUGFkZGluZ1RvcCA9IHBhZGRpbmdUb3A7XHJcbiAgICAgICAgICAgIHJldHVybiB7YWN0aXZlLCBhY3RpdmVIZWlnaHQsIGFjdGl2ZVBhZGRpbmdUb3B9O1xyXG4gICAgICAgIH0pO1xyXG4gICAgfTtcclxuXHJcbiAgICBzZXRDYXNoT3V0ID0gKGxpc3QsIGhlaWdodCwgcGFkZGluZ1RvcCkgPT4ge1xyXG4gICAgICAgIHRoaXMuc2V0U3RhdGUoKHN0YXRlKSA9PiB7XHJcbiAgICAgICAgICAgIGNvbnN0IGNhc2hPdXQgPSBsaXN0O1xyXG4gICAgICAgICAgICBjb25zdCBjYXNoT3V0SGVpZ2h0ID0gaGVpZ2h0O1xyXG4gICAgICAgICAgICBjb25zdCBjYXNoT3V0UGFkZGluZ1RvcCA9IHBhZGRpbmdUb3A7XHJcbiAgICAgICAgICAgIHJldHVybiB7Y2FzaE91dCwgY2FzaE91dEhlaWdodCwgY2FzaE91dFBhZGRpbmdUb3B9O1xyXG4gICAgICAgIH0pO1xyXG4gICAgfTtcclxuXHJcbiAgICBmb3JtYXRBbW91bnQoYW1vdW50LCBjdXJyZW5jeSkge1xyXG4gICAgICAgIGFtb3VudCA9IHBhcnNlRmxvYXQoYW1vdW50KTtcclxuICAgICAgICBpZihhbW91bnQgPT09IDApIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDw+LS08Lz5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPD5cclxuICAgICAgICAgICAgICAgIHthbW91bnQudG9GaXhlZChjdXJyZW5jeS5mcmFjdGlvbkRpZ2l0KX0gPHNwYW4gY2xhc3NOYW1lPVwiY3VycmVuY3lcIj57Y3VycmVuY3kuY3VycmVuY3lDb2RlfTwvc3Bhbj5cclxuICAgICAgICAgICAgPC8+XHJcbiAgICAgICAgKTtcclxuICAgIH1cclxuXHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgY29uc3QgY3VycmVudCA9IHRoaXMuc3RhdGUuY3VycmVudDtcclxuICAgICAgICBjb25zdCBwbGF5ZXJzQ3VycmVudCA9IGN1cnJlbnQubWFwKChpdGVtKSA9PiB7XHJcbiAgICAgICAgICAgIGNvbnN0IHtwbGF5ZXJJZCwgc3RhdHVzLCBkaXNwbGF5TmFtZSwgYmV0QW1vdW50LCBjYXNob3V0Rm9ybWF0ZWQsIHdpbkFtb3VudCwgY3VycmVuY3l9ID0gaXRlbTtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXsncm93JyArIHN0YXR1c30ga2V5PXtwbGF5ZXJJZH0+XHJcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2wxXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e2Rpc3BsYXlOYW1lfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sMlwiPnt0aGlzLmZvcm1hdEFtb3VudChiZXRBbW91bnQsIGN1cnJlbmN5KX08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbDNcIj57Y2FzaG91dEZvcm1hdGVkfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sNFwiPnt0aGlzLmZvcm1hdEFtb3VudCh3aW5BbW91bnQsIGN1cnJlbmN5KX08L2Rpdj5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICApO1xyXG4gICAgICAgIH0pO1xyXG5cclxuICAgICAgICBjb25zdCBhY3RpdmUgPSB0aGlzLnN0YXRlLmFjdGl2ZTtcclxuICAgICAgICBjb25zdCBhY3RpdmVIZWlnaHQgPSB0aGlzLnN0YXRlLmFjdGl2ZUhlaWdodDtcclxuICAgICAgICBjb25zdCBhY3RpdmVQYWRkaW5nVG9wID0gdGhpcy5zdGF0ZS5hY3RpdmVQYWRkaW5nVG9wO1xyXG4gICAgICAgIGNvbnN0IHBsYXllcnNBY3RpdmUgPSBhY3RpdmUubWFwKChpdGVtKSA9PiB7XHJcbiAgICAgICAgICAgIGNvbnN0IHtwbGF5ZXJJZCwgc3RhdHVzLCBkaXNwbGF5TmFtZSwgYmV0QW1vdW50LCBjYXNob3V0Rm9ybWF0ZWQsIHdpbkFtb3VudCwgY3VycmVuY3l9ID0gaXRlbTtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXsncm93JyArIHN0YXR1c30ga2V5PXtwbGF5ZXJJZH0+XHJcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2wxXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e2Rpc3BsYXlOYW1lfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sMlwiPnt0aGlzLmZvcm1hdEFtb3VudChiZXRBbW91bnQsIGN1cnJlbmN5KX08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbDNcIj57Y2FzaG91dEZvcm1hdGVkfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sNFwiPnt0aGlzLmZvcm1hdEFtb3VudCh3aW5BbW91bnQsIGN1cnJlbmN5KX08L2Rpdj5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICApO1xyXG4gICAgICAgIH0pO1xyXG5cclxuICAgICAgICBjb25zdCBjYXNoT3V0ID0gdGhpcy5zdGF0ZS5jYXNoT3V0O1xyXG4gICAgICAgIGNvbnN0IGNhc2hPdXRIZWlnaHQgPSB0aGlzLnN0YXRlLmNhc2hPdXRIZWlnaHQ7XHJcbiAgICAgICAgY29uc3QgY2FzaE91dFBhZGRpbmdUb3AgPSB0aGlzLnN0YXRlLmNhc2hPdXRQYWRkaW5nVG9wO1xyXG4gICAgICAgIGNvbnN0IHBsYXllcnNDYXNoT3V0ID0gY2FzaE91dC5tYXAoKGl0ZW0pID0+IHtcclxuICAgICAgICAgICAgY29uc3Qge3BsYXllcklkLCBzdGF0dXMsIGRpc3BsYXlOYW1lLCBiZXRBbW91bnQsIGNhc2hvdXRGb3JtYXRlZCwgd2luQW1vdW50LCBjdXJyZW5jeX0gPSBpdGVtO1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9eydyb3cnICsgc3RhdHVzfSBrZXk9e3BsYXllcklkfT5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbDFcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj57ZGlzcGxheU5hbWV9PC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2wyXCI+e3RoaXMuZm9ybWF0QW1vdW50KGJldEFtb3VudCwgY3VycmVuY3kpfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sM1wiPntjYXNob3V0Rm9ybWF0ZWR9PC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2w0XCI+e3RoaXMuZm9ybWF0QW1vdW50KHdpbkFtb3VudCwgY3VycmVuY3kpfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfSk7XHJcblxyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICA8ZGl2IGlkPVwicGxheWVyc0N1cnJlbnRcIj57cGxheWVyc0N1cnJlbnR9PC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8ZGl2IGlkPVwicGxheWVyc0FjdGl2ZVwiIHN0eWxlPXt7aGVpZ2h0OiBhY3RpdmVIZWlnaHQsIHBhZGRpbmdUb3A6IGFjdGl2ZVBhZGRpbmdUb3B9fT57cGxheWVyc0FjdGl2ZX08L2Rpdj5cclxuICAgICAgICAgICAgICAgIDxkaXYgaWQ9XCJwbGF5ZXJzQ2FzaE91dFwiIHN0eWxlPXt7aGVpZ2h0OiBjYXNoT3V0SGVpZ2h0LCBwYWRkaW5nVG9wOiBjYXNoT3V0UGFkZGluZ1RvcH19PntwbGF5ZXJzQ2FzaE91dH08L2Rpdj5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgKTtcclxuICAgIH07XHJcbn1cclxuXHJcblJlYWN0RE9NLnJlbmRlcig8QXBwLz4sIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwbGF5ZXJzJykpOyJdfQ==</script></head>
+<body class="en" data-new-gr-c-s-check-loaded="14.1154.0" data-gr-ext-installed="">
+    <form method="post" action="./Board.aspx?Token=264665a0-81e3-4574-a622-98c868068a9f&amp;ReturnUrl=https%3a%2f%2fbestbet.bet%2fcloseurl%2f&amp;StopUrl=&amp;Skin=BestbetJetX&amp;chat=" id="form1" style="overflow: visible;">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="mcnKQF+781PsT7TeprPK4GpSf80jNV29TINwOVbvSW1lOW49vf8f2TcOeqsPYKS0//4dToxO5fvotqtlrijI1EdJzHG9qz/5fyrqCBjN0zg=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="149E6D1B">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="9PzWXCHNzymCX6dNBaMYMzhU2nys7lIUiQ7BbEaBNwtYem5s6lMyC7S3bn/7rBQAzHJmeP9PfeUsijTO1etXKnPrEuituE8I1ZjvV7aDnDdn+VpP2p3yCOJ/KNibyp4Z">
+</div>
+        <input type="hidden" name="ctl00$Version" id="Version" value="v.2.2.0.0">
+	
+    <input autocomplete="off" id="StaticContentUrl" type="hidden" value="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Sound/">
+
+    <input type="hidden" id="stopUrl" value="">
+
+    <div style="position: fixed; left: -100000px; top: -100000px;">
+        <div style="font-family: robotobold;">test</div>
+        <div style="font-family: CrystalUni-Medium;">test</div>
+    </div>
+
+    <div class="message-div">
+        <div class="message" style="display: none">
+            <div class="close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66388 7.00036L13.6554 2.00909C14.1149 1.54963 14.1149 0.804714 13.6554 0.345327C13.1959 -0.114126 12.451 -0.114126 11.9916 0.345327L6.99998 5.33667L2.0084 0.345261C1.54892 -0.114192 0.804032 -0.114192 0.344557 0.345261C-0.114852 0.804714 -0.114852 1.54963 0.344557 2.00902L5.33614 7.0003L0.344557 11.9916C-0.114852 12.4511 -0.114852 13.196 0.344557 13.6554C0.804032 14.1149 1.54892 14.1149 2.0084 13.6554L6.99998 8.66406L11.9916 13.6554C12.451 14.1149 13.1959 14.1149 13.6554 13.6554C14.1149 13.1959 14.1149 12.4511 13.6554 11.9916L8.66388 7.00036Z" fill="white"></path>
+                </svg>
+            </div>
+            <div class="icon">
+                <svg class="success-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 0C5.60708 0 0 5.60708 0 12.5C0 19.3929 5.60708 25 12.5 25C19.3929 25 25 19.3919 25 12.5C25 5.60806 19.3929 0 12.5 0ZM12.5 23.0635C6.67603 23.0635 1.93647 18.325 1.93647 12.5C1.93647 6.67505 6.67603 1.93647 12.5 1.93647C18.325 1.93647 23.0635 6.67505 23.0635 12.5C23.0635 18.325 18.324 23.0635 12.5 23.0635Z" fill="#36CE2B"></path>
+                <path d="M18.2349 8.15259C17.8408 7.79434 17.228 7.82242 16.8678 8.21841L10.9615 14.7221L8.10807 11.8213C7.73141 11.4398 7.1195 11.434 6.73898 11.8097C6.35748 12.1844 6.35167 12.7973 6.72736 13.1788L10.2992 16.8097C10.4822 16.9956 10.73 17.0992 10.9895 17.0992C10.9953 17.0992 11.0021 17.0992 11.0079 17.1002C11.2752 17.0943 11.5269 16.9801 11.706 16.7826L18.3007 9.52076C18.66 9.12374 18.6309 8.51182 18.2349 8.15259Z" fill="#36CE2B"></path>
+                </svg>
+
+                <svg class="error-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M12.4997 17.1329C11.8008 17.1329 11.2149 17.7188 11.2149 18.4177C11.2149 19.1166 11.8008 19.7025 12.4997 19.7025C13.1729 19.7025 13.7845 19.1166 13.7536 18.4486C13.7845 17.7137 13.2038 17.1329 12.4997 17.1329Z" fill="#F13D3D"></path>
+                <path d="M24.3917 21.6862C25.1985 20.2935 25.2036 18.6336 24.4019 17.246L16.354 3.30864C15.5575 1.90566 14.1185 1.07312 12.5048 1.07312C10.8911 1.07312 9.45218 1.9108 8.65562 3.30351L0.597449 17.2563C-0.204256 18.6592 -0.199117 20.3295 0.612867 21.7222C1.41457 23.0995 2.84839 23.9269 4.4518 23.9269H20.527C22.1356 23.9269 23.5797 23.0892 24.3917 21.6862ZM22.6443 20.6789C22.1972 21.4498 21.4058 21.9072 20.5219 21.9072H4.44666C3.57301 21.9072 2.78672 21.4601 2.34989 20.7046C1.90793 19.9389 1.90279 19.0241 2.34476 18.2533L10.4029 4.30564C10.8397 3.53991 11.6209 3.08766 12.5048 3.08766C13.3836 3.08766 14.1699 3.54505 14.6067 4.31078L22.6598 18.2584C23.0915 19.0087 23.0863 19.9132 22.6443 20.6789Z" fill="#F13D3D"></path>
+                <path d="M12.1811 8.11376C11.5695 8.28849 11.1892 8.84351 11.1892 9.51674C11.2201 9.92273 11.2458 10.3339 11.2766 10.7399C11.364 12.2867 11.4513 13.8028 11.5387 15.3497C11.5695 15.8739 11.9755 16.2541 12.4997 16.2541C13.0239 16.2541 13.435 15.8482 13.4607 15.3188C13.4607 15.0002 13.4607 14.7073 13.4916 14.3835C13.5481 13.3916 13.6098 12.3998 13.6663 11.4079C13.6971 10.7655 13.7537 10.1232 13.7845 9.48077C13.7845 9.2495 13.7537 9.04394 13.6663 8.83837C13.4042 8.26279 12.7926 7.96986 12.1811 8.11376Z" fill="#F13D3D"></path>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="25" height="25" fill="white"></rect>
+                </clipPath>
+                </defs>
+                </svg>
+            </div>
+            <div class="text">The bet is canceled</div>
+        </div>
+
+
+    </div>
+
+    <header>
+        <div class="content">
+            <div class="logo" style="width: 59.8px;"></div>
+            <div class="promotion-dailyleaderboard-button">
+
+            </div>
+            <div class="promotion-wheel-button"></div>            
+            <div class="right"><a class="button exit"></a></div>
+            <div class="right"><a class="button sound"></a></div>
+            <div class="right"><a class="button help"></a></div>
+            <div class="right redirect-to-history-parent">
+                <a id="redirect-to-history" class="button redirect-to-history"></a>
+            </div>
+            <div class="right" id="balance">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 865.22 853.2">
+                    <defs><style>.cls-1{fill:#fddf56;}</style></defs>
+                    <path class="cls-1" d="M520.87,959.44c-58.13,0-112.94-12.67-154.34-35.67-43.36-24.08-67.24-56.8-67.24-92.12V761.31a10.56,10.56,0,0,1,21.11,0v70.34c0,27.31,20,53.48,56.38,73.68,38.31,21.29,89.49,33,144.09,33q3.15,0,6.27-.05h.18a10.56,10.56,0,0,1,.17,21.11C525.29,959.42,523.09,959.44,520.87,959.44Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M731.9,797.73a10.55,10.55,0,0,1-10.55-10.55V701a10.55,10.55,0,0,1,21.1,0v86.17A10.55,10.55,0,0,1,731.9,797.73Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M520.87,893.79c-58.13,0-112.94-12.67-154.34-35.67C323.17,834,299.29,801.32,299.29,766V695.66a10.56,10.56,0,1,1,21.11,0V766c0,27.31,20,53.47,56.38,73.67,38.31,21.29,89.49,33,144.09,33,1.86,0,3.71,0,5.56,0a10.56,10.56,0,0,1,.29,21.11C524.78,893.77,522.83,893.79,520.87,893.79Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M731.9,797.65a10.55,10.55,0,0,1-10.55-10.55V695.66a10.55,10.55,0,1,1,21.1,0V787.1A10.55,10.55,0,0,1,731.9,797.65Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M520.87,828.14c-58.13,0-112.94-12.67-154.34-35.67-43.36-24.09-67.24-56.81-67.24-92.13V630a10.56,10.56,0,0,1,21.11,0v70.34c0,27.32,20,53.48,56.38,73.68,38.31,21.29,89.49,33,144.09,33S626.65,795.31,665,774c36.36-20.2,56.38-46.36,56.38-73.68V630a10.55,10.55,0,0,1,21.1,0v70.34c0,35.32-23.87,68-67.23,92.13C633.82,815.47,579,828.14,520.87,828.14Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M520.87,762.48c-58.13,0-112.94-12.67-154.34-35.66-43.36-24.09-67.24-56.81-67.24-92.13s23.88-68,67.24-92.12c41.4-23,96.21-35.67,154.34-35.67s113,12.67,154.35,35.67c43.36,24.09,67.23,56.8,67.23,92.12s-23.87,68-67.23,92.13C633.82,749.81,579,762.48,520.87,762.48Zm0-234.48c-54.6,0-105.78,11.73-144.09,33-36.36,20.2-56.38,46.37-56.38,73.68s20,53.48,56.38,73.68c38.31,21.28,89.49,33,144.09,33s105.78-11.73,144.1-33c36.36-20.2,56.38-46.37,56.38-73.68S701.33,581.21,665,561C626.65,539.73,575.48,528,520.87,528Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M731.9,797.73a10.55,10.55,0,0,1-10.55-10.55V701a10.55,10.55,0,0,1,21.1,0v86.17A10.55,10.55,0,0,1,731.9,797.73Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M945.57,966.14A10.56,10.56,0,0,1,945.5,945c54.06-.37,104.61-12.25,142.34-33.46,35.83-20.13,55.57-46.14,55.57-73.22V768a10.55,10.55,0,0,1,21.1,0v70.34c0,70.82-96.14,126.95-218.87,127.78Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M731.9,804.36a10.56,10.56,0,0,1-10.55-10.56V702.36a10.55,10.55,0,0,1,21.1,0V793.8A10.55,10.55,0,0,1,731.9,804.36Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M942.93,900.49a10.55,10.55,0,0,1,0-21.1c54.6,0,105.78-11.73,144.1-33,36.35-20.2,56.38-46.37,56.38-73.68V702.36a10.55,10.55,0,0,1,21.1,0V772.7c0,35.32-23.88,68-67.24,92.12C1055.87,887.82,1001.06,900.49,942.93,900.49Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M942.93,834.84c-58.13,0-112.94-12.67-154.34-35.67-43.36-24.09-67.24-56.8-67.24-92.12V636.71a10.55,10.55,0,1,1,21.1,0v70.34c0,27.31,20,53.47,56.39,73.68,38.31,21.28,89.49,33,144.09,33s105.78-11.72,144.1-33c36.35-20.21,56.38-46.37,56.38-73.68V636.71a10.55,10.55,0,1,1,21.1,0v70.34c0,35.32-23.88,68-67.24,92.12C1055.87,822.17,1001.06,834.84,942.93,834.84Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M942.93,769.19c-58.13,0-112.94-12.67-154.34-35.67-43.36-24.09-67.24-56.81-67.24-92.12V571.05a10.55,10.55,0,0,1,21.1,0V641.4c0,27.31,20,53.47,56.39,73.67,38.31,21.29,89.49,33,144.09,33s105.78-11.72,144.1-33c36.35-20.2,56.38-46.36,56.38-73.67V571.05a10.55,10.55,0,0,1,21.1,0V641.4c0,35.31-23.88,68-67.24,92.12C1055.87,756.52,1001.06,769.19,942.93,769.19Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M942.93,703.53c-58.13,0-112.94-12.67-154.34-35.67-43.36-24.08-67.24-56.8-67.24-92.12V505.4a10.55,10.55,0,0,1,21.1,0v70.34c0,27.31,20,53.48,56.39,73.68,38.31,21.28,89.49,33,144.09,33s105.78-11.73,144.1-33c36.35-20.2,56.38-46.37,56.38-73.68V505.4a10.55,10.55,0,0,1,21.1,0v70.34c0,35.32-23.88,68-67.24,92.12C1055.87,690.86,1001.06,703.53,942.93,703.53Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M942.93,637.88c-58.13,0-112.94-12.67-154.34-35.67-43.36-24.09-67.24-56.8-67.24-92.12V439.74a10.55,10.55,0,0,1,21.1,0v70.35c0,27.31,20,53.47,56.39,73.67,38.31,21.29,89.49,33,144.09,33s105.78-11.72,144.1-33c36.35-20.19,56.38-46.36,56.38-73.67V439.74a10.55,10.55,0,0,1,21.1,0v70.35c0,35.32-23.88,68-67.24,92.12C1055.87,625.21,1001.06,637.88,942.93,637.88Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M942.93,572.22c-58.13,0-112.94-12.66-154.34-35.66-43.36-24.09-67.24-56.81-67.24-92.13s23.88-68,67.24-92.12c41.4-23,96.21-35.66,154.34-35.66s112.94,12.66,154.34,35.66c43.36,24.09,67.24,56.81,67.24,92.12s-23.88,68-67.24,92.13C1055.87,559.56,1001.06,572.22,942.93,572.22Zm0-234.47c-54.6,0-105.78,11.72-144.09,33-36.36,20.2-56.39,46.36-56.39,73.67s20,53.48,56.39,73.68c38.31,21.29,89.49,33,144.09,33s105.78-11.72,144.1-33c36.35-20.2,56.38-46.36,56.38-73.68s-20-53.47-56.38-73.67C1048.71,349.47,997.53,337.75,942.93,337.75Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M734.54,1169.85c-58.13,0-112.95-12.67-154.34-35.67-43.36-24.09-67.24-56.8-67.24-92.12V971.71a10.55,10.55,0,1,1,21.1,0v70.35c0,27.31,20,53.47,56.38,73.67,38.32,21.29,89.5,33,144.1,33s105.78-11.72,144.09-33c36.36-20.2,56.39-46.36,56.39-73.67V971.71a10.55,10.55,0,1,1,21.1,0v70.35c0,35.32-23.88,68-67.24,92.12C847.48,1157.18,792.67,1169.85,734.54,1169.85Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M734.54,1104.19c-58.13,0-112.95-12.66-154.34-35.66C536.84,1044.44,513,1011.72,513,976.4V906.06a10.55,10.55,0,0,1,21.1,0V976.4c0,27.32,20,53.48,56.38,73.68,38.32,21.29,89.5,33,144.1,33s105.78-11.72,144.09-33C915,1029.88,935,1003.72,935,976.4V906.06a10.55,10.55,0,0,1,21.1,0V976.4c0,35.32-23.88,68-67.24,92.13C847.48,1091.53,792.67,1104.19,734.54,1104.19Z" transform="translate(-299.29 -316.65)"></path><path class="cls-1" d="M734.54,1038.54c-58.13,0-112.95-12.67-154.34-35.67C536.84,978.79,513,946.07,513,910.75s23.88-68,67.24-92.12c41.39-23,96.21-35.67,154.34-35.67s112.94,12.67,154.34,35.67c43.36,24.08,67.24,56.8,67.24,92.12s-23.88,68-67.24,92.12C847.48,1025.87,792.67,1038.54,734.54,1038.54Zm0-234.47c-54.61,0-105.78,11.72-144.1,33-36.35,20.2-56.38,46.37-56.38,73.68s20,53.48,56.38,73.68c38.32,21.28,89.5,33,144.1,33s105.78-11.73,144.09-33C915,964.23,935,938.06,935,910.75s-20-53.48-56.39-73.68C840.32,815.79,789.14,804.07,734.54,804.07Z" transform="translate(-299.29 -316.65)"></path>
+                </svg>
+                <span class="caption">Balance</span>
+                <span class="value" id="availableAmount">0.00<span class="currency">ETB</span></span>
+            </div>
+
+            <div class="right">
+                <a class="user">
+                    <span id="displayName">1079_429802</span>
+                </a>
+            </div>
+            <div class="right none"><div id="game-id" class="deal-number"></div></div>
+
+            <div class="jackpot" style="visibility: visible;">
+                <iframe frameborder="0" scrolling="no" id="jackpotCounter" src="https://eu-server.ssgportal.com/Jackpots/Viewer/EmptyView.aspx"></iframe>
+
+                <a class="stop-button" target="_top">STOP</a>
+            </div>
+            <div class="promotion-button"><canvas width="50" height="50" style="touch-action: none; width: 50px; height: 50px; cursor: inherit;"></canvas></div>
+        </div>
+    </header>
+
+    <section id="game" class="mobile two-buttons game-started">
+        <div class="content">
+            <div id="main">
+                <div class="rtp">
+                    <div class="left">PROBABILITY OF THE MAX WIN: <span>0,00995%</span></div>
+                    <div class="right">RTP: <span>97%</span></div>
+                </div>
+                <div class="canvas GameParent" style="width: 307.99px; margin-left: 0.0050798px; height: 150.505px;"><canvas width="705" height="344" style="touch-action: none; width: 307.99px; height: 150.5px; cursor: inherit; margin-top: 0px;"></canvas></div>
+                <div class="buttons">
+                    <div class="tabs none" style="top: -35px;">
+                        <a data-tab="cash-game" class="active">CASH GAME</a>
+                        <a data-tab="gift">FREESPINS</a>
+                    </div>
+
+                    <div class="cash-game page">
+                        <div class="cash-game-1">
+                        <div class="cash-game-2">
+                        
+                            <div id="button-0" class="buttons-col place-bet" style="display: block;">
+                                <div class="bet-div">
+                                    <div class="bet-col1">
+                                        <div class="bet-input bets">
+                                            <div class="auto">
+                                                <div class="head">AUTO</div>
+                                                <label class="checkbox">
+                                                    <input id="auto-bet-0" type="checkbox">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="label">Bet</div>
+                                            <div class="clear"></div>
+                                            <div class="input">
+                                                <div>
+                                                    <input data-button="0" id="bet-value-0" autocomplete="off" type="text" onkeydown="" class="inp etb" data-minbet="0.5" data-maxbet="20000" data-last="0" value="100">
+                                                    <div class="input-over"></div>
+                                                    <div class="input-cursor"></div>
+                                                    <span><span class="currency">ETB</span></span>
+                                                    <a data-button="0" class="minus" data-step="100"></a>
+                                                    <a data-button="0" class="plus" data-step="100"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bet-list">
+                                            
+                                            <a data-button="0" data-sound="1" data-bet="500">500.00</a>
+                                            
+                                            <a data-button="0" data-sound="2" data-bet="2000">2000.00</a>
+                                            
+                                            <a data-button="0" data-sound="3" data-bet="20000">20000.00</a>
+                                            
+                                            <a data-button="0" data-sound="4" data-bet="0">ALL</a>
+                                        </div>
+                                    </div>
+                                    <div class="bet-col2">
+                                        <div class="bet-input cash-out">
+                                            <div class="auto">
+                                                <div class="head">AUTO</div>
+                                                <label class="checkbox">
+                                                    <input id="auto-cash-out-0" type="checkbox">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="label">Collect</div>
+                                            <div class="clear"></div>
+                                            <div class="input">
+                                                <div>
+                                                    <input data-button="0" id="cash-out-value-0" autocomplete="off" type="text" onkeydown="if(this.value.length == 6) return false;" data-step="0.01" class="inp" value="2.00">
+                                                    <div class="input-over"></div>
+                                                    <div class="input-cursor"></div>
+                                                    <span>x</span>
+                                                    <a data-button="0" class="minus"></a>
+                                                    <a data-button="0" class="plus"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bet-parent">
+                                            <div data-button="0" id="bet-0" class="bet place-bet">
+                                                <div class="info error" style="display: none;">
+                                                    <div class="error-info"></div>
+                                                    <div class="success-info"></div>
+                                                </div>
+
+                                                <div class="place-bet-div">
+                                                    <div class="place-bet1">Place your bet</div>
+                                                    <div class="place-bet2">For next round</div>
+                                                </div>
+
+                                                <div class="cancel-bet-div">
+                                                    <div class="cancel-bet1">Cancel </div>
+                                                </div>
+
+                                                <div class="cash-out-div">
+                                                    <div class="cash-out1">0.00 <span class="currency">ETB</span></div>
+                                                    <div class="cash-out2">Collect</div>
+                                                </div>
+                                            </div>
+                                            <div data-button="0" class="bet-add active">
+                                                <span class="plus">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.70593 4.19048H6.80952V1.29407C6.80952 0.582476 6.21186 0 5.5 0C4.78814 0 4.19048 0.582476 4.19048 1.29407V4.19048H1.29407C0.582476 4.19048 0 4.78814 0 5.5C0 6.21186 0.582476 6.80952 1.29407 6.80952H4.19048V9.70593C4.19048 10.4175 4.78814 11 5.5 11C6.21186 11 6.80952 10.4175 6.80952 9.70593V6.80952H9.70593C10.4175 6.80952 11 6.21186 11 5.5C11 4.78814 10.4175 4.19048 9.70593 4.19048Z" fill="#726309"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="minus">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.70593 4.19049H6.80952H4.19048H1.29407C0.582476 4.19049 0 4.78816 0 5.50001C0 6.21187 0.582476 6.80954 1.29407 6.80954H4.19048H6.80952H9.70593C10.4175 6.80954 11 6.21187 11 5.50001C11 4.78816 10.4175 4.19049 9.70593 4.19049Z" fill="#726309"></path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div id="button-1" class="buttons-col place-bet" style="display: block;">
+                                <div class="bet-div">
+                                    <div class="bet-col1">
+                                        <div class="bet-input bets">
+                                            <div class="auto">
+                                                <div class="head">AUTO</div>
+                                                <label class="checkbox">
+                                                    <input id="auto-bet-1" type="checkbox">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="label">Bet</div>
+                                            <div class="clear"></div>
+                                            <div class="input">
+                                                <div>
+                                                    <input data-button="1" id="bet-value-1" autocomplete="off" type="text" onkeydown="" class="inp etb" data-minbet="0.5" data-maxbet="20000" data-last="0" value="100">
+                                                    <div class="input-over"></div>
+                                                    <div class="input-cursor"></div>
+                                                    <span><span class="currency">ETB</span></span>
+                                                    <a data-button="1" class="minus" data-step="100"></a>
+                                                    <a data-button="1" class="plus" data-step="100"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bet-list">
+                                            
+                                            <a data-button="1" data-sound="1" data-bet="500">500.00</a>
+                                            
+                                            <a data-button="1" data-sound="2" data-bet="2000">2000.00</a>
+                                            
+                                            <a data-button="1" data-sound="3" data-bet="20000">20000.00</a>
+                                            
+                                            <a data-button="1" data-sound="4" data-bet="0">ALL</a>
+                                        </div>
+                                    </div>
+                                    <div class="bet-col2">
+                                        <div class="bet-input cash-out">
+                                            <div class="auto">
+                                                <div class="head">AUTO</div>
+                                                <label class="checkbox">
+                                                    <input id="auto-cash-out-1" type="checkbox">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="label">Collect</div>
+                                            <div class="clear"></div>
+                                            <div class="input">
+                                                <div>
+                                                    <input data-button="1" id="cash-out-value-1" autocomplete="off" type="text" onkeydown="if(this.value.length == 6) return false;" data-step="0.01" class="inp" value="2.00">
+                                                    <div class="input-over"></div>
+                                                    <div class="input-cursor"></div>
+                                                    <span>x</span>
+                                                    <a data-button="1" class="minus"></a>
+                                                    <a data-button="1" class="plus"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bet-parent">
+                                            <div data-button="1" id="bet-1" class="bet place-bet">
+                                                <div class="info error" style="display: none;">
+                                                    <div class="error-info"></div>
+                                                    <div class="success-info"></div>
+                                                </div>
+
+                                                <div class="place-bet-div">
+                                                    <div class="place-bet1">Place your bet</div>
+                                                    <div class="place-bet2">For next round</div>
+                                                </div>
+
+                                                <div class="cancel-bet-div">
+                                                    <div class="cancel-bet1">Cancel </div>
+                                                </div>
+
+                                                <div class="cash-out-div">
+                                                    <div class="cash-out1">0.00 <span class="currency">ETB</span></div>
+                                                    <div class="cash-out2">Collect</div>
+                                                </div>
+                                            </div>
+                                            <div data-button="1" class="bet-add active">
+                                                <span class="plus">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.70593 4.19048H6.80952V1.29407C6.80952 0.582476 6.21186 0 5.5 0C4.78814 0 4.19048 0.582476 4.19048 1.29407V4.19048H1.29407C0.582476 4.19048 0 4.78814 0 5.5C0 6.21186 0.582476 6.80952 1.29407 6.80952H4.19048V9.70593C4.19048 10.4175 4.78814 11 5.5 11C6.21186 11 6.80952 10.4175 6.80952 9.70593V6.80952H9.70593C10.4175 6.80952 11 6.21186 11 5.5C11 4.78814 10.4175 4.19048 9.70593 4.19048Z" fill="#726309"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="minus">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.70593 4.19049H6.80952H4.19048H1.29407C0.582476 4.19049 0 4.78816 0 5.50001C0 6.21187 0.582476 6.80954 1.29407 6.80954H4.19048H6.80952H9.70593C10.4175 6.80954 11 6.21187 11 5.50001C11 4.78816 10.4175 4.19049 9.70593 4.19049Z" fill="#726309"></path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="gift none page">
+                        <div class="gift-div">
+                            <div class="gift-left">
+                                <div class="gift-left1 none">
+                                    <div class="head">Price of FREESPIN</div>
+                                    <div class="value" id="GiftSpinAmount">111</div>
+                                </div>
+                                <div class="gift-left1">
+                                    <div class="head">Freespins win</div>
+                                    <div class="value green" id="GiftSpinWin">111</div>
+                                </div>
+                                <div class="gift-left2">
+                                    <div class="head yellow">Received </div>
+                                    <div class="value yellow" id="GiftSpinCount">1</div>
+                                </div>
+                                <div class="gift-left2 none">
+                                    <div class="head">Used</div>
+                                    <div class="value" id="GiftSpinUsed">1</div>
+                                </div>
+                                <div class="gift-left2">
+                                    <div class="head green">Freespins left</div>
+                                    <div class="value green" id="GiftSpinLeft">1</div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="gift-right">
+                                <div class="bet-parent">
+                                    <div class="bet disabled place-bet" data-button="2" id="bet-2">
+                                            <div class="info error" style="display: none;">
+                                            <div class="error-info"></div>
+                                            <div class="success-info"></div>
+                                        </div>
+
+                                        <div class="place-bet-div">
+                                            <div class="place-bet1">0.20 <span class="currency"></span></div>
+                                            <div class="place-bet2">Bet FREESPIN</div>
+                                        </div>
+
+                                        <div class="cancel-bet-div">
+                                            <div class="cancel-bet1">Cancel </div>
+                                        </div>
+
+                                        <div class="cash-out-div">
+                                            <div class="cash-out1">0.00 <span class="currency">ETB</span></div>
+                                            <div class="cash-out2">Collect</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bet-parent mt5">
+                                    <div class="bet disabled place-bet" data-button="3" id="bet-3">
+                                            <div class="info error" style="display: none;">
+                                            <div class="error-info"></div>
+                                            <div class="success-info"></div>
+                                        </div>
+
+                                        <div class="place-bet-div">
+                                            <div class="place-bet1">0.20 <span class="currency"></span></div>
+                                            <div class="place-bet2">Bet FREESPIN</div>
+                                        </div>
+
+                                        <div class="cancel-bet-div">
+                                            <div class="cancel-bet1">Cancel </div>
+                                        </div>
+
+                                        <div class="cash-out-div">
+                                            <div class="cash-out1">0.00 <span class="currency">ETB</span></div>
+                                            <div class="cash-out2">Collect</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-div" style="top: auto; height: 70vh;">
+                        <div class="info-content bets active">
+                            <div class="head">
+                                <div class="col1"><div>User</div></div>
+                                <div class="col2">Bet</div>
+                                <div class="col3">Collect</div>
+                                <div class="col4">Win</div>
+                            </div>
+                            <div class="list" id="players"><div><div id="playersCurrent"></div><div id="playersActive" style="height: 2997px; padding-top: 0px;"><div class="row"><div class="col1"><div>1****1</div></div><div class="col2">1000.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****1</div></div><div class="col2">1000.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****7</div></div><div class="col2">500.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****0</div></div><div class="col2">300.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****1</div></div><div class="col2">200.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****4</div></div><div class="col2">100.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****4</div></div><div class="col2">100.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****1</div></div><div class="col2">100.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****5</div></div><div class="col2">96.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****6</div></div><div class="col2">57.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****0</div></div><div class="col2">50.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****2</div></div><div class="col2">50.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****7</div></div><div class="col2">50.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****7</div></div><div class="col2">50.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****0</div></div><div class="col2">47.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****0</div></div><div class="col2">40.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****3</div></div><div class="col2">40.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****8</div></div><div class="col2">30.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****3</div></div><div class="col2">20.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****3</div></div><div class="col2">20.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div><div class="row"><div class="col1"><div>1****0</div></div><div class="col2">20.00 <span class="currency">ETB</span></div><div class="col3">--</div><div class="col4">--</div></div></div><div id="playersCashOut" style="height: 378px; padding-top: 0px;"><div class="row win"><div class="col1"><div>1****9</div></div><div class="col2">30.00 <span class="currency">ETB</span></div><div class="col3">1.5</div><div class="col4">45.00 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****6</div></div><div class="col2">0.50 <span class="currency">ETB</span></div><div class="col3">1.61</div><div class="col4">0.80 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****7</div></div><div class="col2">10.00 <span class="currency">ETB</span></div><div class="col3">1.51</div><div class="col4">15.10 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****3</div></div><div class="col2">1.00 <span class="currency">ETB</span></div><div class="col3">1.5</div><div class="col4">1.50 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****7</div></div><div class="col2">19.00 <span class="currency">ETB</span></div><div class="col3">1.4</div><div class="col4">26.60 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****8</div></div><div class="col2">0.50 <span class="currency">ETB</span></div><div class="col3">1.39</div><div class="col4">0.69 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****5</div></div><div class="col2">0.50 <span class="currency">ETB</span></div><div class="col3">1.32</div><div class="col4">0.66 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****2</div></div><div class="col2">20.00 <span class="currency">ETB</span></div><div class="col3">1.17</div><div class="col4">23.40 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****3</div></div><div class="col2">0.50 <span class="currency">ETB</span></div><div class="col3">1.21</div><div class="col4">0.60 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****8</div></div><div class="col2">0.50 <span class="currency">ETB</span></div><div class="col3">1.26</div><div class="col4">0.63 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****3</div></div><div class="col2">0.50 <span class="currency">ETB</span></div><div class="col3">1.2</div><div class="col4">0.60 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****2</div></div><div class="col2">5.00 <span class="currency">ETB</span></div><div class="col3">1.21</div><div class="col4">6.05 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****3</div></div><div class="col2">3.00 <span class="currency">ETB</span></div><div class="col3">1.2</div><div class="col4">3.60 <span class="currency">ETB</span></div></div><div class="row win"><div class="col1"><div>1****5</div></div><div class="col2">10.00 <span class="currency">ETB</span></div><div class="col3">1.04</div><div class="col4">10.40 <span class="currency">ETB</span></div></div></div></div></div>
+                        </div>
+                        <div class="info-content history">
+                            <div class="head">
+                                History
+                            </div>
+                            <div class="list" id="last100Spins"><div class="row win">1.87</div><div class="row win">31.27</div><div class="row lose">1.15</div><div class="row win">4.54</div><div class="row lose">1.40</div><div class="row win">41.02</div><div class="row lose">1.01</div><div class="row win">282.26</div><div class="row lose">1.12</div><div class="row win">14.46</div><div class="row lose">1.13</div><div class="row win">2.56</div><div class="row lose">1.01</div><div class="row win">53.06</div><div class="row win">8.77</div><div class="row win">2.07</div><div class="row lose">1.20</div><div class="row win">11.18</div><div class="row win">2.42</div><div class="row win">2.56</div><div class="row win">1.69</div><div class="row lose">1.05</div><div class="row lose">1.08</div><div class="row win">6.13</div><div class="row win">3.27</div><div class="row lose">1.47</div><div class="row win">5.96</div><div class="row lose">1.49</div><div class="row lose">1.25</div><div class="row win">1.90</div><div class="row win">3.22</div><div class="row lose">1.02</div><div class="row win">7.71</div><div class="row win">20.37</div><div class="row lose">1.17</div><div class="row lose">1.20</div><div class="row win">1.69</div><div class="row lose">1.15</div><div class="row win">1.69</div><div class="row lose">1.34</div><div class="row win">3.88</div><div class="row lose">1.44</div><div class="row win">4.48</div><div class="row win">4.11</div><div class="row lose">1.15</div><div class="row win">4.05</div><div class="row win">5.16</div><div class="row win">2.35</div><div class="row lose">1.10</div><div class="row win">2.25</div><div class="row lose">1.49</div><div class="row lose">1.49</div><div class="row lose">1.20</div><div class="row lose">1.10</div><div class="row win">7.18</div><div class="row win">1.69</div><div class="row win">1.98</div><div class="row win">1.64</div><div class="row win">36.59</div><div class="row win">1.64</div><div class="row lose">1.17</div><div class="row win">42.82</div><div class="row win">2.16</div><div class="row lose">1.36</div><div class="row lose">1.44</div><div class="row lose">1.13</div><div class="row lose">1.17</div><div class="row win">1.64</div><div class="row win">61.20</div><div class="row win">2.53</div><div class="row lose">1.38</div><div class="row win">5.79</div><div class="row lose">1.23</div><div class="row win">6.68</div><div class="row lose">1.02</div><div class="row lose">1.25</div><div class="row win">2.07</div><div class="row win">16.92</div><div class="row win">2.53</div><div class="row win">3.27</div><div class="row lose">1.10</div><div class="row lose">1.49</div><div class="row win">2.19</div><div class="row win">3.99</div><div class="row win">3.77</div><div class="row win">3.00</div><div class="row win">3.56</div><div class="row win">2.29</div><div class="row win">2.29</div><div class="row win">5.16</div><div class="row win">3.82</div><div class="row lose">1.42</div><div class="row win">2.16</div><div class="row lose">1.23</div><div class="row win">1.87</div><div class="row win">1.51</div><div class="row win">39.87</div><div class="row lose">1.15</div><div class="row lose">1.36</div><div class="row win">2.56</div><div class="row win">1.87</div><div class="row lose">1.25</div><div class="row win">4.54</div><div class="row win">15.31</div><div class="row win">17.16</div><div class="row win">1.90</div><div class="row lose">1.20</div><div class="row lose">1.40</div><div class="row lose">1.00</div><div class="row win">3.72</div><div class="row lose">1.01</div><div class="row win">2.04</div><div class="row win">2.67</div><div class="row win">4.17</div><div class="row win">2.60</div><div class="row win">11.50</div><div class="row win">9.69</div><div class="row lose">1.49</div><div class="row win">17.16</div><div class="row win">1.84</div><div class="row lose">1.44</div><div class="row win">10.26</div><div class="row win">3.09</div><div class="row lose">1.23</div><div class="row win">2.13</div><div class="row win">1.74</div><div class="row lose">1.05</div><div class="row lose">1.49</div><div class="row lose">1.07</div><div class="row win">1.92</div><div class="row win">5.39</div><div class="row win">6.87</div><div class="row lose">1.00</div><div class="row win">1.98</div><div class="row lose">1.23</div><div class="row win">2.19</div><div class="row lose">1.12</div><div class="row lose">1.07</div><div class="row lose">1.12</div><div class="row win">4.11</div><div class="row lose">1.40</div><div class="row lose">1.05</div><div class="row lose">1.22</div><div class="row win">4.29</div><div class="row lose">1.13</div><div class="row win">1.57</div><div class="row win">4.41</div><div class="row win">2.75</div><div class="row lose">1.02</div><div class="row lose">1.23</div><div class="row win">43.44</div><div class="row win">2.71</div><div class="row win">4.48</div><div class="row win">7.07</div><div class="row win">5.47</div><div class="row win">2.25</div><div class="row lose">1.38</div><div class="row lose">1.20</div><div class="row win">2.83</div><div class="row win">2.42</div><div class="row win">2.29</div><div class="row win">1.64</div><div class="row win">1.62</div><div class="row lose">1.44</div><div class="row win">1.60</div><div class="row win">1.74</div><div class="row lose">1.08</div><div class="row win">2.29</div><div class="row win">1.60</div><div class="row win">3.41</div><div class="row win">15.09</div><div class="row win">6.68</div><div class="row lose">1.38</div><div class="row win">1.82</div><div class="row win">1.74</div><div class="row win">7.38</div><div class="row win">7.49</div><div class="row win">1.84</div><div class="row win">5.16</div><div class="row win">22.19</div><div class="row win">1.57</div><div class="row lose">1.23</div><div class="row win">1.64</div><div class="row lose">1.07</div><div class="row win">1.79</div><div class="row win">7.18</div><div class="row lose">1.08</div><div class="row lose">1.34</div><div class="row win">13.08</div><div class="row win">1.62</div><div class="row win">1.53</div><div class="row win">3.56</div><div class="row win">2.71</div><div class="row lose">1.01</div><div class="row win">2.10</div><div class="row win">2.79</div><div class="row win">2.60</div><div class="row win">2.22</div><div class="row win">5.47</div><div class="row win">3.18</div></div>
+                        </div>
+                        <div class="info-content my-bets">
+                            <div class="head">
+                                <div class="col1"><div>Time</div></div>
+                                <div class="col3">Boom</div>
+                                <div class="col2">Bet</div>
+                                <div class="col3">Collect</div>
+                                <div class="col4">Win</div>
+                            </div>
+                            <div class="list" id="last24ClientSpins"></div>
+                        </div>
+                        <div class="info-content stats">
+                            <div class="head">
+                                <div class="col1"><div>User</div></div>
+                                <div class="col2">Bet</div>
+                                <div class="col3">Odd</div>
+                                <div class="col4">Win</div>
+                            </div>
+                            <div class="list" id="last20BigWins"></div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="chat none">
+                <div class="head">
+                    Chat
+                    <a class="close"></a>
+                </div>
+                <div class="chat-content">
+                    <div class="chat-message">
+                    <div class="chat-outer"> <div class="chat-date">06:19:31</div> <div class="chat-user">1****2:</div> <div class="chat-text">10× please</div></div><div class="chat-outer"> <div class="chat-date">06:20:41</div> <div class="chat-user">1****3:</div> <div class="chat-text">Kkkkkkkk ere unfair beza</div></div><div class="chat-outer"> <div class="chat-date">07:20:12</div> <div class="chat-user">1****0:</div> <div class="chat-text">Ivot by 5birr 7890</div></div><div class="chat-outer"> <div class="chat-date">10:17:37</div> <div class="chat-user">1****4:</div> <div class="chat-text">hahahahah</div></div><div class="chat-outer"> <div class="chat-date">11:35:05</div> <div class="chat-user">1****6:</div> <div class="chat-text">100 atmedebu</div></div><div class="chat-outer"> <div class="chat-date">11:35:35</div> <div class="chat-user">1****6:</div> <div class="chat-text">10 becha</div></div><div class="chat-outer"> <div class="chat-date">11:36:24</div> <div class="chat-user">1****6:</div> <div class="chat-text">10 becha medium selalki yafandabihal tebda</div></div><div class="chat-outer"> <div class="chat-date">12:01:14</div> <div class="chat-user">1****0:</div> <div class="chat-text">በ jet x ከ 60,000 ብር በላይ መብላት ከፈለጋችሁ 0938232238 ደውልልኝ ማርያምን ታመሰግኑኛላችሁ</div></div><div class="chat-outer"> <div class="chat-date">13:16:24</div> <div class="chat-user">1****1:</div> <div class="chat-text">ዛሬ ደሞ 60000 ሆነ እናመሰግናለን ብቻህን ብላ</div></div><div class="chat-outer"> <div class="chat-date">13:20:08</div> <div class="chat-user">1****7:</div> <div class="chat-text">Fake fake</div></div><div class="chat-outer"> <div class="chat-date">14:49:24</div> <div class="chat-user">1****9:</div> <div class="chat-text">Chat </div></div><div class="chat-outer"> <div class="chat-date">14:59:46</div> <div class="chat-user">1****0:</div> <div class="chat-text">ማርያምን ታመሰግኑኛላችሁ በ jet x በቀላሉ ከ 10,000 እስከ 100,000 ብር  የምትበሉበት prediction ተዘጋጅቷል አሁኑኑ ይደውሉ 0938232238 or tg  @jetxpredictor1</div></div><div class="chat-outer"> <div class="chat-date">16:51:25</div> <div class="chat-user">1****4:</div> <div class="chat-text">እናትን ልብዳት ye leba lejj</div></div><div class="chat-outer"> <div class="chat-date">17:25:40</div> <div class="chat-user">1****7:</div> <div class="chat-text">Hello </div></div><div class="chat-outer"> <div class="chat-date">17:25:53</div> <div class="chat-user">1****7:</div> <div class="chat-text">Help me</div></div><div class="chat-outer"> <div class="chat-date">18:10:20</div> <div class="chat-user">1****4:</div> <div class="chat-text">Help me</div></div><div class="chat-outer"> <div class="chat-date">18:36:25</div> <div class="chat-user">1****0:</div> <div class="chat-text">Uongo</div></div><div class="chat-outer"> <div class="chat-date">20:09:47</div> <div class="chat-user">1****5:</div> <div class="chat-text">Ayzuachw 1ken moten enigelagelalen😂🎂</div></div><div class="chat-outer"> <div class="chat-date">20:30:03</div> <div class="chat-user">1****5:</div> <div class="chat-text">ZARE degmo bisobachuwal ere mn gud new  </div></div><div class="chat-outer"> <div class="chat-date">20:50:06</div> <div class="chat-user">1****0:</div> <div class="chat-text">Mndnew gn</div></div><div class="chat-outer"> <div class="chat-date">20:50:17</div> <div class="chat-user">1****0:</div> <div class="chat-text">Tebeduuuuuiiuui</div></div><div class="chat-outer"> <div class="chat-date">20:52:35</div> <div class="chat-user">1****0:</div> <div class="chat-text">Leboooooch nachew virtual atchewetuuuuu</div></div><div class="chat-outer"> <div class="chat-date">21:00:12</div> <div class="chat-user">1****5:</div> <div class="chat-text">YEMR hack ALEW yihe neger ??mdnew endeziiiiiii</div></div><div class="chat-outer"> <div class="chat-date">21:05:43</div> <div class="chat-user">1****1:</div> <div class="chat-text">ግን እንዴት መፋታት አቃተን?????</div></div><div class="chat-outer"> <div class="chat-date">21:07:02</div> <div class="chat-user">1****4:</div> <div class="chat-text">እረ መረረኝ</div></div><div class="chat-outer"> <div class="chat-date">21:15:09</div> <div class="chat-user">1****7:</div> <div class="chat-text">Uuuuuuuuuu</div></div><div class="chat-outer"> <div class="chat-date">21:20:40</div> <div class="chat-user">1****0:</div> <div class="chat-text">Bedun eko uuuuuu</div></div><div class="chat-outer"> <div class="chat-date">21:21:07</div> <div class="chat-user">1****0:</div> <div class="chat-text">አረ ተበላን </div></div><div class="chat-outer"> <div class="chat-date">22:35:30</div> <div class="chat-user">1****6:</div> <div class="chat-text">👄</div></div><div class="chat-outer"> <div class="chat-date">22:35:57</div> <div class="chat-user">1****6:</div> <div class="chat-text">💝</div></div><div class="chat-outer"> <div class="chat-date">23:28:03</div> <div class="chat-user">1****7:</div> <div class="chat-text">Hahaha gena yinefunal kalaqomnew</div></div><div class="chat-outer"> <div class="chat-date">02:45:49</div> <div class="chat-user">1****6:</div> <div class="chat-text">5</div></div><div class="chat-outer"> <div class="chat-date">02:46:30</div> <div class="chat-user">1****6:</div> <div class="chat-text">5</div></div><div class="chat-outer"> <div class="chat-date">02:46:39</div> <div class="chat-user">1****6:</div> <div class="chat-text">5</div></div><div class="chat-outer"> <div class="chat-date">02:46:46</div> <div class="chat-user">1****6:</div> <div class="chat-text">5</div></div><div class="chat-outer"> <div class="chat-date">02:46:53</div> <div class="chat-user">1****6:</div> <div class="chat-text">5</div></div><div class="chat-outer"> <div class="chat-date">02:47:02</div> <div class="chat-user">1****6:</div> <div class="chat-text">5</div></div><div class="chat-outer"> <div class="chat-date">06:03:54</div> <div class="chat-user">1****7:</div> <div class="chat-text">Wari</div></div><div class="chat-outer"> <div class="chat-date">06:04:27</div> <div class="chat-user">1****7:</div> <div class="chat-text">Yaamuslinaay</div></div><div class="chat-outer"> <div class="chat-date">06:37:55</div> <div class="chat-user">1****6:</div> <div class="chat-text">Stop this game </div></div><div class="chat-outer"> <div class="chat-date">07:30:21</div> <div class="chat-user">1****6:</div> <div class="chat-text">Please help me </div></div><div class="chat-outer"> <div class="chat-date">11:18:48</div> <div class="chat-user">1****4:</div> <div class="chat-text">Awru inji</div></div><div class="chat-outer"> <div class="chat-date">11:38:37</div> <div class="chat-user">1****7:</div> <div class="chat-text">Mi</div></div><div class="chat-outer"> <div class="chat-date">11:38:54</div> <div class="chat-user">1****6:</div> <div class="chat-text">Leboch</div></div><div class="chat-outer"> <div class="chat-date">12:19:42</div> <div class="chat-user">1****6:</div> <div class="chat-text">Shame</div></div><div class="chat-outer"> <div class="chat-date">12:33:18</div> <div class="chat-user">1****6:</div> <div class="chat-text">እውነትም ግብር ደርሶባቹል</div></div><div class="chat-outer"> <div class="chat-date">12:37:38</div> <div class="chat-user">1****6:</div> <div class="chat-text">Siilka hoyadin wasa</div></div><div class="chat-outer"> <div class="chat-date">15:10:57</div> <div class="chat-user">1****7:</div> <div class="chat-text">Abe ade hawes bakurjaj</div></div><div class="chat-outer"> <div class="chat-date">16:50:31</div> <div class="chat-user">1****0:</div> <div class="chat-text">maxa kuudacay saxib lol</div></div><div class="chat-outer"> <div class="chat-date">18:03:09</div> <div class="chat-user">1****5:</div> <div class="chat-text">Tu</div></div><div class="chat-outer"> <div class="chat-date">18:09:50</div> <div class="chat-user">1****9:</div> <div class="chat-text">Er uuuuu mnd nw under 2 odd</div></div><div class="chat-outer"> <div class="chat-date">18:09:59</div> <div class="chat-user">1****9:</div> <div class="chat-text">Scrpappppp boom boom boom</div></div><div class="chat-outer"> <div class="chat-date">18:11:38</div> <div class="chat-user">1****0:</div> <div class="chat-text">lol</div></div><div class="chat-outer"> <div class="chat-date">18:11:53</div> <div class="chat-user">1****0:</div> <div class="chat-text">how do i get the prize drop </div></div><div class="chat-outer"> <div class="chat-date">18:25:42</div> <div class="chat-user">1****5:</div> <div class="chat-text">Ere telebir lakuling waganoch 0988362755 30bir bicha </div></div><div class="chat-outer"> <div class="chat-date">18:26:15</div> <div class="chat-user">1****5:</div> <div class="chat-text">Pilis 50 0988362755</div></div><div class="chat-outer"> <div class="chat-date">18:56:39</div> <div class="chat-user">1****9:</div> <div class="chat-text">Er besmam metfo game nw</div></div><div class="chat-outer"> <div class="chat-date">19:13:17</div> <div class="chat-user">1****9:</div> <div class="chat-text">Er mnd nw mefndat bicha red cross meslegn</div></div><div class="chat-outer"> <div class="chat-date">19:27:52</div> <div class="chat-user">1****4:</div> <div class="chat-text">uuuuuu</div></div><div class="chat-outer"> <div class="chat-date">20:11:41</div> <div class="chat-user">1****9:</div> <div class="chat-text">Er bes</div></div><div class="chat-outer"> <div class="chat-date">20:15:57</div> <div class="chat-user">1****9:</div> <div class="chat-text">Liboch </div></div><div class="chat-outer"> <div class="chat-date">20:16:14</div> <div class="chat-user">1****3:</div> <div class="chat-text">Ere e atachewun lbdat e.se endale 2 ena 3</div></div><div class="chat-outer"> <div class="chat-date">20:16:44</div> <div class="chat-user">1****9:</div> <div class="chat-text">38 eyalet stop argia gen brian belachut liboch</div></div><div class="chat-outer"> <div class="chat-date">20:32:06</div> <div class="chat-user">1****3:</div> <div class="chat-text">Enezihn bekum makatel nw egna endakatelun</div></div><div class="chat-outer"> <div class="chat-date">20:42:29</div> <div class="chat-user">1****2:</div> <div class="chat-text">Ere gud</div></div></div>
+                    <div class="chat-input">
+                        <div class="chat-input-left">
+                            <input type="text" id="chat-message" name="message" placeholder="Message text">
+                        </div>
+                        <div class="chat-input-right">
+                            <input autocomplete="off" type="button" id="send-chat" value="Send">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <footer style="top: auto;">
+                <span class="footer-buttons prev"></span>
+                <span class="footer-buttons next"></span>
+                <div class="footer-menu">
+                    <div id="footer-menu">
+                        <a data-tab="bets" class="active">Players</a>
+                        <a data-tab="history">History</a>
+                        <a data-tab="my-bets">My bets</a>
+                        <a data-tab="chat">Chat</a>
+                        <a data-tab="stats">Statistics</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <div class="popup">
+        <div class="popup-div">
+            <div class="popup-head">Message</div>
+            <div class="popup-content">
+                Message
+                <br>
+                <a class="popup-bt">Exit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="jackpot-popup">
+        <div class="jackpot-popup-div">
+            <div class="jackpot-popup-head">
+                Jackpot
+                <div class="jackpot-popup-close">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="17px" height="16px">
+                        <path fill-rule="evenodd"  fill="rgb(95, 95, 95)"
+                              d="M10.393,7.996 L16.699,1.700 C17.091,1.309 17.091,0.675 16.699,0.284 C16.307,-0.107 15.673,-0.107 15.281,0.284 L8.975,6.580 L2.668,0.284 C2.276,-0.107 1.642,-0.107 1.250,0.284 C0.858,0.675 0.858,1.309 1.250,1.700 L7.557,7.996 L1.250,14.292 C0.858,14.683 0.858,15.317 1.250,15.708 C1.446,15.903 1.703,16.001 1.959,16.001 C2.215,16.001 2.472,15.903 2.668,15.708 L8.975,9.412 L15.281,15.708 C15.477,15.903 15.734,16.001 15.990,16.001 C16.246,16.001 16.503,15.903 16.699,15.708 C17.091,15.317 17.091,14.683 16.699,14.292 L10.393,7.996 Z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="jackpot-popup-content">
+               <div class="jackpot-popup-star-left"></div>
+               <div class="jackpot-popup-star-right"></div>
+               <div class="jackpot-popup-div1">Jackpot played out</div>
+               <div class="jackpot-popup-div2">2323</div>
+               <div class="jackpot-popup-div3">You won</div>
+               <div class="jackpot-popup-div4">1212</div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="jackpot-new">
+        <img id="jackpots-image" class="animation-jackpots-image-hidden" src="" alt="">
+        
+        <div class="jackpot-clone">
+            
+            <p>JACKPOT</p>
+            <div>
+                <div class="list-element-1">
+                    <div class="list-elements list-jackpot"></div>
+                </div>
+                <div class="list-element-1">
+                    <div class="list-elements list-jackpot"></div>
+                </div>
+                <div class="list-element-1">
+                    <div class="list-elements list-jackpot"></div>
+                </div>
+                <div class="list-element-1">
+                    <div class="list-elements list-jackpot"></div>
+                </div>
+                <div class="list-element-1">
+                    <div class="list-elements list-jackpot"></div>
+                </div>
+                <div class="list-element-1">
+                    <div class="list-elements list-jackpot"></div>
+                </div>
+                <div class="list-element-1">
+                    <div class="list-elements list-jackpot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info-on-start" class="help-popup info-on-start">
+        <div class="help-popup-div">
+            <div class="help-popup-head">
+                <div data-tab="play" class="help-head-item active">How to play</div>
+                <div class="help-idq"></div>
+                <div class="help-popup-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px">
+                        <path fill-rule="evenodd" fill="rgb(95, 95, 95)" d="M10.393,7.996 L16.699,1.700 C17.091,1.309 17.091,0.675 16.699,0.284 C16.307,-0.107 15.673,-0.107 15.281,0.284 L8.975,6.580 L2.668,0.284 C2.276,-0.107 1.642,-0.107 1.250,0.284 C0.858,0.675 0.858,1.309 1.250,1.700 L7.557,7.996 L1.250,14.292 C0.858,14.683 0.858,15.317 1.250,15.708 C1.446,15.903 1.703,16.001 1.959,16.001 C2.215,16.001 2.472,15.903 2.668,15.708 L8.975,9.412 L15.281,15.708 C15.477,15.903 15.734,16.001 15.990,16.001 C16.247,16.001 16.503,15.903 16.699,15.708 C17.091,15.317 17.091,14.683 16.699,14.292 L10.393,7.996 Z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="help-popup-content play">
+                <div class="play-group"> <div class="play-item play-text play-text-right"> Make your bet before take off </div> <div class="play-item play-circle">1</div> <div class="play-item play-img1">
+            
+            <div class="help-bet">Bet</div>
+            <div class="help-bet-auto">AUTO</div>
+            <div class="help-cash-out">Collect</div>
+            <div class="help-cash-out-auto">AUTO</div>
+            <div class="help-amount">20000.00 ETB</div>
+            <div class="help-coef">10.00 x</div>
+            <div class="help-bet-list-0">500.00 ETB</div>
+            <div class="help-bet-list-1">2000.00 ETB</div>
+            <div class="help-bet-list-2">20000.00 ETB</div>
+            <div class="help-bet-list-3">ALL</div>
+        
+            <div class="help-place-bet-button">Place your bet</div>
+        </div> </div> <div class="play-group"> <div class="play-item play-img2">
+            <div class="help-cash-out-coef">367.43</div>
+        </div> <div class="play-item play-circle">2</div> <div class="play-item play-text play-text-left"> Take a risk and wait for odds to go high</div> </div> <div class="play-group"> <div class="play-item play-text play-text-right"> Cash out before it explodes </div> <div class="play-item play-circle">3</div> <div class="play-item play-img3">
+            
+            <div class="help-bet">Bet</div>
+            <div class="help-bet-auto">AUTO</div>
+            <div class="help-cash-out">Collect</div>
+            <div class="help-cash-out-auto">AUTO</div>
+            <div class="help-amount">20000.00 ETB</div>
+            <div class="help-coef">10.00 x</div>
+            <div class="help-bet-list-0">500.00 ETB</div>
+            <div class="help-bet-list-1">2000.00 ETB</div>
+            <div class="help-bet-list-2">20000.00 ETB</div>
+            <div class="help-bet-list-3">ALL</div>
+        
+            <div class="help-cash-out-button">
+                <div class="text1">1.63 ETB</div>
+                <div class="text2">Collect</div>
+            </div>
+        </div> </div>
+            </div>
+            <div class="help-popup-footer">
+                <label class="help-popup-checkbox">
+                    <input id="help-accept" type="checkbox" checked="">
+                    <span></span>
+                    Don't show again
+                </label>
+                <a class="help-popup-accept">Accept</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="help-popup" class="help-popup">
+        <div class="help-popup-div">
+            <div class="help-popup-head">
+                <div data-tab="play" class="help-head-item active">How to play</div>
+                <div data-tab="rules" class="help-head-item">RULES</div>
+                <div class="help-idq"></div>
+                <div class="help-popup-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px">
+                        <path fill-rule="evenodd" fill="rgb(95, 95, 95)" d="M10.393,7.996 L16.699,1.700 C17.091,1.309 17.091,0.675 16.699,0.284 C16.307,-0.107 15.673,-0.107 15.281,0.284 L8.975,6.580 L2.668,0.284 C2.276,-0.107 1.642,-0.107 1.250,0.284 C0.858,0.675 0.858,1.309 1.250,1.700 L7.557,7.996 L1.250,14.292 C0.858,14.683 0.858,15.317 1.250,15.708 C1.446,15.903 1.703,16.001 1.959,16.001 C2.215,16.001 2.472,15.903 2.668,15.708 L8.975,9.412 L15.281,15.708 C15.477,15.903 15.734,16.001 15.990,16.001 C16.247,16.001 16.503,15.903 16.699,15.708 C17.091,15.317 17.091,14.683 16.699,14.292 L10.393,7.996 Z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="help-popup-content play">
+                <div class="play-group"> <div class="play-item play-text play-text-right"> Make your bet before take off </div> <div class="play-item play-circle">1</div> <div class="play-item play-img1">
+            
+            <div class="help-bet">Bet</div>
+            <div class="help-bet-auto">AUTO</div>
+            <div class="help-cash-out">Collect</div>
+            <div class="help-cash-out-auto">AUTO</div>
+            <div class="help-amount">20000.00 ETB</div>
+            <div class="help-coef">10.00 x</div>
+            <div class="help-bet-list-0">500.00 ETB</div>
+            <div class="help-bet-list-1">2000.00 ETB</div>
+            <div class="help-bet-list-2">20000.00 ETB</div>
+            <div class="help-bet-list-3">ALL</div>
+        
+            <div class="help-place-bet-button">Place your bet</div>
+        </div> </div> <div class="play-group"> <div class="play-item play-img2">
+            <div class="help-cash-out-coef">367.43</div>
+        </div> <div class="play-item play-circle">2</div> <div class="play-item play-text play-text-left"> Take a risk and wait for odds to go high</div> </div> <div class="play-group"> <div class="play-item play-text play-text-right"> Cash out before it explodes </div> <div class="play-item play-circle">3</div> <div class="play-item play-img3">
+            
+            <div class="help-bet">Bet</div>
+            <div class="help-bet-auto">AUTO</div>
+            <div class="help-cash-out">Collect</div>
+            <div class="help-cash-out-auto">AUTO</div>
+            <div class="help-amount">20000.00 ETB</div>
+            <div class="help-coef">10.00 x</div>
+            <div class="help-bet-list-0">500.00 ETB</div>
+            <div class="help-bet-list-1">2000.00 ETB</div>
+            <div class="help-bet-list-2">20000.00 ETB</div>
+            <div class="help-bet-list-3">ALL</div>
+        
+            <div class="help-cash-out-button">
+                <div class="text1">1.63 ETB</div>
+                <div class="text2">Collect</div>
+            </div>
+        </div> </div>
+            </div>
+
+            <div class="help-popup-content rules none">
+                <div class="rules-item"> <div class="rules-title">WHAT IS JETX?</div> <div class="rules-content"> JETX IS A GAME FROM SMARTSOFT WHERE YOU CAN QUICKLY AND EASILY WIN MONEY.     </div> </div> <div class="rules-item"> <div class="rules-title">HOW TO PLAY JETX?</div> <div class="rules-content"> PLACE A BET BEFORE THE JET TAKES OFF. YOU CAN PLACE A SINGLE BET OR TWO BETS ON THE SAME JETX FLIGHT. THE MINIMUM STAKE IS 0.5 ETB, AND THE MAXIMUM IS 20000 ETB. USE THE +/- BUTTONS ALONGSIDE EACH BET OPTION TO ADJUST THE BET SIZE.<br> USE THE “COLLECT” BUTTON TO COLLECT WINNINGS. TRY TO FLY AS HIGH AS POSSIBLE AND CASH OUT BEFORE THE JET EXPLODES. FLIGHT HEIGHT IS NOT DETERMINED AND VARIES FROM 1 TO THE MAX WIN CAP.<br> USE “AUTOPLAY” TO AUTOMATICALLY PLACE THE SAME BET VALUE FOR EACH NEW ROUND. YOU CAN DO THIS ON ONE OR BOTH BET SELECTIONS. THE MINIMUM ODDS FOR AUTO COLLECT IS 1.35X.<br> IN THE LEFT CORNER OF THE GAME PANEL, COEFFICIENTS STATISTICS AND GAME HISTORY ARE PRESENTED. VALUES ARE DISPLAYED IN GREEN AND RED: THE RED COLOUR INDICATES THE COEFFICIENTS THAT ARE LESS THAN 1.5 AND GREEN MORE THAN 1.5.</div> </div> <div class="rules-item"> <div class="rules-title">HOW IS THE WIN CALCULATED?</div> <div class="rules-content"> THE POTENTIAL PROFIT IS CALCULATED BY MULTIPLYING THE CURRENT FLIGHT COEFFICIENT AND THE MADE BET. <br> MINIMUM MULTIPLIER (COEFFICIENT) IS 1.00X. MAX WIN PER BET IS 1000000ETB.<br> WHEN THE MAXIMUM WIN CAP IS REACHED, THE WIN AMOUNT IS AUTO COLLECTED. THE SPEED OR SKILL OF THE PLAYER DOES NOT INFLUENCE, OR INCREASE THE CHANCES OF WINNING, OR DEFINE THE OUTCOME OF THE GAME. </div> </div> <div class="rules-item"> <div class="rules-title">HOW DO I GET THE WINNINGS?</div> <div class="rules-content"> USE THE COLLECT BUTTON BEFORE THE EXPLOSION (THE PROFIT IS INSTANTLY REFLECTED ON THE BALANCE). IF THE EXPLOSION HAPPENS, THE STAKE IS CONSIDERED LOST.<br> RTP FOR THE GAME IS 96.7-98.8%. <span id="game-version"></span> <br> THE MAXIMUM RTP CAN BE ACHIEVED BY THE PLAYER WHEN OPTING TO BET ON THE LOWEST POSSIBLE CRASH MULTIPLIER (COEFFICIENT) <span class="cb-hide"><span class="cb-hide">ALSO WHEN MAXIMUM COEFFICIENT TO 25000X IS REACHED, THE WIN AMOUNT IS AUTO COLLECTED. <span class="pt-jurisdiction">JETX IS A REALTIME GAME, FOR WHICH REASON ACTIONS WITH CAHSOUT BUTTONIS SUBJECT TO DELAYS DEPENDING ON YOU INTERNET CONNECTION, USUALLY AROUND 200-300 MS. WHEN YOU CLICK CASHOUT YOU TRIGGER A PAYOUT REQUEST, WHICH IS FURTHER SETTLED AT THE VALUE OF AN ACTUAL MULTIPLIER BY THE TIME IT IS PROCESSED BY GAME SERVER, PROVIDING THERE IS NO CRASH.</span></span></span></div> </div> <div class="rules-item"> <div class="rules-title">WHAT HAPPENS IF I GET DISCONNECTED?</div> <div class="rules-content"> IF THE PLAYER GETS DISCONNECTED AND THE BET IS ACTIVE: 1. THE BET CONTINUES TO PLAY UNTIL THE ROUND FINISHES, THE PLAYER CAN MANUALLY COLLECT THE WIN IF RETURNING BEFORE THE ROUND END. OTHERWISE, THE BET CONTINUES TO PLAY UNTIL IT LOSES OR REACHES THE MAX WIN CAP. 2. IF THE “AUTOCASHOUT” IS ENABLED, THE WIN WILL AUTOMATICALLY BE COLLECTED IF THE JET REACHES THE PRE-SETTED MULTIPLIER.         THE WINNING AMOUNT WILL BE ADDED TO YOUR BALANCE.     </div> </div> <!--disconnect--> <div class="rules-item rules-jackpot "> <div class="rules-title">HOW ARE THE JACKPOTS PLAYED OUT?</div> <div class="rules-content"> IF JACKPOT IS ENABLED, ONLY ONE PLAYER SELECTED BY THE PROGRAM WINS THE JACKPOT.<br> THE USER'S BET MUST BE AT LEAST 1 ETB, AND THE MINIMUM COEFFICIENT DURING THE WITHDRAWAL OF THE BET AT LEAST 1.4. CONTRIBUTION TO THE JACKPOT IS 0.21%, IRRESPECTIVE OF WHETHER THE BET QUALIFIES FOR WINNING THE JACKPOT OR NOT. THE HIGHEST RTP OF 97.9% CAN BE ACHIEVED WHEN PLAYING BETS THAT QUALIFY FOR JACKPOTS BY BETTING ON THE COEFFICIENT 2.00. <br> IF A PLAYER HITS THE JACKPOT, ONLY 70% OF THE JACKPOT AMOUNT IS CREDITED TO THE PLAYER. THE REMAINING 30% OF THE JACKPOT IS CARRIED OVER TO FUND THE NEXT JACKPOT.      </div> </div> <div><br><br> USERS CONVICTED OF FRAUD AND VIOLATION OF THE RULES AND CONDITIONS FOR WEBSITE USING, WILL BE LIMITED IN ABILITY TO USE THE WEBSITE PRODUCTS AND RESOURCE. LIMITATION LEVEL WILL DETERMINED BY ADMINISTRATION OF WEBSITE.     RESERVE THE RIGHT TO CHANGE RULES OF GAME OR CANCEL THE GAME COMPLETELY. <br> MALFUNCTION VOIDS ALL PAYS AND PLAYS</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gift-popup">
+        <div class="gift-popup-background"></div>
+        <div class="gift-popup-div">
+            <div class="gift-popup-head">
+                FREESPINS
+                <div class="gift-popup-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px">
+                        <path fill-rule="evenodd" fill="rgb(95, 95, 95)" d="M10.393,7.996 L16.699,1.700 C17.091,1.309 17.091,0.675 16.699,0.284 C16.307,-0.107 15.673,-0.107 15.281,0.284 L8.975,6.580 L2.668,0.284 C2.276,-0.107 1.642,-0.107 1.250,0.284 C0.858,0.675 0.858,1.309 1.250,1.700 L7.557,7.996 L1.250,14.292 C0.858,14.683 0.858,15.317 1.250,15.708 C1.446,15.903 1.703,16.001 1.959,16.001 C2.215,16.001 2.472,15.903 2.668,15.708 L8.975,9.412 L15.281,15.708 C15.477,15.903 15.734,16.001 15.990,16.001 C16.246,16.001 16.503,15.903 16.699,15.708 C17.091,15.317 17.091,14.683 16.699,14.292 L10.393,7.996 Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="gift-popup-content">
+                <div class="gift-new">
+                    <div class="gift-new-head">Congratulations! You got</div>
+                    <div class="gift-new-info">
+                        <div class="item giftSpinsStartAmount">10</div>
+                        <div class="item">x</div>
+                        <div class="item giftSpinAmount">0.50</div>
+                        <div class="item"><span class="currency"></span></div>
+                        <div class="text">FREESPINS</div>
+                    </div>
+
+                    <div class="gift-new-buttons">
+                        <div class="gift-new-button big gift-button-accept">Use</div>
+                        <div class="gift-new-button gift-button-remind-me">Remind later</div>
+                        <div class="gift-new-button gift-button-cancel">Cancel</div>
+                    </div>
+                </div>
+
+
+                <div class="gift-cancel none">
+                    <div class="gift-cancel-icon"></div>
+                    <div class="gift-cancel-text1">
+                        If you cancel you will lose all freespins
+                    </div>
+                    <div class="gift-cancel-text2">
+                        Do you really want to cancel?
+                    </div>
+
+                    <div class="gift-new-buttons">
+                        <div class="gift-new-button gift-button-cancel-yes">Yes</div>
+                        <div class="gift-new-button green gift-button-cancel-no">No</div>
+                    </div>
+                </div>
+
+                <div class="gift-win none">
+                    <div class="gift-win-title">Congratulations!</div>
+                    <div class="gift-win-text">You won in Free Spins</div>
+                    <div class="gift-win-info">
+                        <div class="win giftSpinTotalWin">1212</div>
+                    </div>
+
+                    <div class="gift-new-buttons">
+                        <div class="gift-new-button big gift-button-gift-exit">Close</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="keyboard-div">
+        <div class="keyboard-top"></div>
+        <div class="keyboard">
+            <div class="keyboard-numbers">
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+                <a>7</a>
+                <a>8</a>
+                <a>9</a>
+                <a class="dot">.</a>
+                <a>0</a>
+                <a class="delete"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="keyboard-buttons">
+                <a class="dot">.</a>
+                <a class="delete"></a>
+                <a class="cancel">CANCEL</a>
+                <a class="ok">OK</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sound-popup" style="display: none;">
+        <div class="sound-popup-content">
+            <div class="sound-popup-content-text">Would you like sound?</div>
+            <div class="sound-popup-content-buttons">
+                <a onclick="mobileSound(true);" class="yes">YES</a>
+                <a onclick="mobileSound(false);" class="no">NO</a>
+            </div>
+        </div>
+    </div>
+
+    </form>
+
+
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/react/react.production.min.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/react/react-dom.production.min.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/react/babel.min.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/react/react.js" type="text/babel"></script>
+
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/lib/jquery-3.4.1.min.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/lib/pixi.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/lib/pixi-spine.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/lib/bowser.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/lib/NoSleep.min.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/lib/fullscreen.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/lib/soundjs.combined.js"></script>
+
+    <script src="../../Content/Scripts/signalR/jquery.signalR-2.2.1.min.js"></script>
+    <script src="../../signalr/hubs"></script>
+    
+
+    
+    <script>
+        window.hub = $.connection.jetXConnectionHub;
+
+        $.connection.hub.qs = { "token": "264665a0-81e3-4574-a622-98c868068a9f", "group": "JetX" };
+        $.connection.hub.start().done(() => {
+            window.hub.server.getList().then(x=>playersInfo(x))
+        });
+
+        window.token = "264665a0-81e3-4574-a622-98c868068a9f";
+
+        window.hub.client.message = function (message) {
+
+        };
+
+        $(window).on('load', function (e) {
+            //InitializeUrls("https://", "JetXapi", "https://bestbet.bet/closeurl/");
+            let url = window.location.href; let arr = url.split("/"); let result = arr[0] + "//"; for (let i = 1; i < arr.length - 3; i++) if (arr[i] !== '') result += arr[i] + '/'; InitializeUrls(result, "JetXapi", "https://bestbet.bet/closeurl/");
+        });
+    </script>
+
+    <script>
+    let locale = {};
+    </script>
+    <script src="/JetXNode84/content/Scripts/Locale.ashx?locale=en&amp;version=bb06756b-bb0b-4638-9d7f-953eaf5c8867"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/JetXStg3/Content/Scripts/JetX.js"></script>
+    <script src="https://eu-static.ssgcontent.com/cache/b5/Themes/Default/JetX/Scripts/Mobile.JetX.js"></script>
+
+
+    <script>
+         </script>  <!-- Global site tag (gtag.js) - Google Analytics -->  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VVWHRNZBTC"></script>  <script>    window.dataLayer = window.dataLayer || [];    function gtag(){dataLayer.push(arguments);}    gtag('js', new Date());      gtag('config', 'G-VVWHRNZBTC');  </script>  <script>
+    </script>
+
+
+
+<span style="display: none; font: 700 16px CrystalUni;">100.00</span><button title="select to enable accessability for this content" style="width: 1px; height: 1px; position: absolute; top: -1000px; left: -1000px; z-index: 2; background-color: rgb(255, 0, 0);"></button><button title="select to enable accessability for this content" style="width: 1px; height: 1px; position: absolute; top: -1000px; left: -1000px; z-index: 2; background-color: rgb(255, 0, 0);"></button></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
